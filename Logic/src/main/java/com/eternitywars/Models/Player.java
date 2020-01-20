@@ -23,6 +23,8 @@ public class Player extends Account
         this.boardRow = new BoardRow();
     }
 
+
+
     public Player(int id, String username, AccountStatus accountStatus, Session session, Deck deck, List<Card> cardsInHand, List<Card> cardsInDeck, LobbyPlayerStatus lobbyPlayerStatus, BoardRow boardRow)
     {
         super(id, username, accountStatus, session);
@@ -32,7 +34,11 @@ public class Player extends Account
         this.lobbyPlayerStatus = lobbyPlayerStatus;
         this.boardRow = boardRow;
     }
-    
+
+    public Player(int userId, String username, AccountStatus accountStatus) {
+        super(userId, username, accountStatus);
+    }
+
     public BoardRow getBoardRows() {
         return boardRow;
     }
